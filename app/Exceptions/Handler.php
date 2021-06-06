@@ -63,7 +63,7 @@ class Handler extends ExceptionHandler
         if ($exception instanceof ModelNotFoundException) {
             $model = strtolower(class_basename($exception->getModel()));
 
-            return $this->errorResponse("Não existe isntância de {$model} para o id informado", Response::HTTP_NOT_FOUND);
+            return $this->errorResponse("Não existe instância de {$model} para o id informado", Response::HTTP_NOT_FOUND);
         }
 
         if ($exception instanceof AuthorizationException) {
